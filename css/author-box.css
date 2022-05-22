@@ -1,0 +1,33 @@
+.author-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 90px 0;
+}
+
+.avatar {
+    padding: 7px;
+    margin-top: 15px;
+    width: 125px;
+    border-radius: 75px;
+}
+
+.author-post {
+    display: inline;
+    font-size: 24px;
+    font-family: system-ui;
+    font-variant: petite-caps;
+}
+
+.author-info, .company {
+    padding: 0;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.short-bio {
+    width: 70%;
+    font-size: 14px;
+    margin-bottom: 5px;
+}

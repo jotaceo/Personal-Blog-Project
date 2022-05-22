@@ -1,0 +1,249 @@
+@import "author-box.css";
+@import "blog-card.css";
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    border:0;    
+}
+
+h1 {
+    color: #fff;
+    font-size: 115px;
+    text-shadow: 10px 0 black;
+    text-align: center;
+    font-family: "Carter One";
+}
+
+h2 {
+    font-size: 46px;
+    padding: 5px;
+}
+
+h3{
+    padding: 15px;
+    font-size: 18px;
+    font-family: system-ui;
+}
+
+p {
+    padding: 15px;
+    font-size: 18px;
+    font-family: system-ui;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-variant: petite-caps;
+}
+
+a:hover {
+    color: black;
+    background-color: #fff;
+}
+
+q {
+    text-align: center;
+}
+
+#grid-container {
+    background-image: url(../img/ground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: inherit;
+    background-position-x: center;
+    grid-template-columns: 1fr 1fr .8fr;
+    grid-template-areas:
+        "hd hd hd"
+        "main main main"
+        "ft ft ft";
+    display: grid;
+    height: 100vh;
+}
+
+.main-header {
+    grid-area: hd;
+    display: flex;
+    height: auto;
+    margin-top: 12px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    grid-area: nav;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    min-width: 720px;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 36px;
+    color: #fff;
+    background: #000;
+    border-bottom: 1px solid #fff;
+}
+
+aside {
+    grid-area: sb;
+}
+
+main {
+    grid-area: main;
+    margin-top: 105px;
+    padding: 10px;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.article-post {
+    width: 60%;
+    width: 800px;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 160px;
+    box-shadow: 4px 5px 15px 1px #000000ad;
+    background-color: #fff;
+}
+
+header {
+    text-align: center;
+}
+
+img.blog-image {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    grid-area: ft;
+    height: 50px;
+    background-color: #000;
+    color: red;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 82px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .menu {
+        min-width: 540px;
+    }
+
+    .article-card {
+        width:100%;
+        margin-bottom: 50px;
+    }
+
+    .article-post {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 67px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .menu {
+        flex-direction: column;
+        min-width: 0;
+        height: 150px;
+        margin-top: 15px;
+    }
+
+    #grid-container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr .05fr;
+        grid-template-areas:
+            "hd nav"
+            "main main"
+            "ft ft"
+            ;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    .article-card {
+        width:100%;
+        margin-bottom: 50px;
+    }
+
+    aside {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 520px) {
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 454px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .main-header {
+        margin-top: 30px;
+    }
+
+    .article-post {
+        width:100%;
+        margin-bottom: 1px;
+    }
+
+    .social-icons {
+        font-size: 16px;
+    }
+}
